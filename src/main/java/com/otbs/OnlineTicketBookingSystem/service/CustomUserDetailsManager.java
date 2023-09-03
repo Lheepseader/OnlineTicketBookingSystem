@@ -55,7 +55,6 @@ public class CustomUserDetailsManager implements UserDetailsManager {
     public void changePassword(String oldPassword, String newPassword) {
         Authentication currentUser = securityContextHolderStrategy.getContext().getAuthentication();
         if (currentUser == null) {
-            // This would indicate bad coding somewhere
             throw new AccessDeniedException(
                     "Can't change password as no Authentication object found in context " + "for current user.");
         }

@@ -21,7 +21,6 @@ class OnlineTicketBookingSystemApplicationTests {
     @Test
     @WithMockUser(username = "aadadad@gmail.com")
     public void testLoadUserByUsername() throws Exception {
-        // Отправка запроса
         System.out.println(mockMvc.perform(get("/api/test"))
 
                 .andExpect(status().isNotFound())
